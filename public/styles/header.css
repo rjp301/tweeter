@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8em 1.5em;
+  color: var(--primary-color);
+  background-color: var(--user-color);
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+#avatar {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#avatar > img {
+  height: 100%;
+}
+
+#avatar > h2 {
+  padding: 0;
+}
