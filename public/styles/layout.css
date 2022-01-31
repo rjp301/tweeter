@@ -10,13 +10,43 @@ html {
   box-sizing: inherit;
 }
 
+
 /*
- * Global layout stuff
- */
+* Global layout stuff
+*/
+
+:root {
+  --primary-color: #f4f1ec;
+  --secondary-color: #545149;
+}
+
+nav {
+  font-family: 'Bungee', cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+#new-tweet {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.8em;
+  padding: 0.4em;
+  border: solid var(--primary-color) 1px;
+  transition: background-color cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+#new-tweet:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
   font-size: 24px;
 }
 
