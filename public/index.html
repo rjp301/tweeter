@@ -23,6 +23,9 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c961af0e55.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" 
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="./scripts/client.js"></script>
@@ -48,7 +51,7 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action="/tweets/" method="POST">
+        <form action="/tweets" method="POST">
           <textarea name="text" rows="1" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div>
             <button type="submit">Tweet</button>
@@ -57,24 +60,6 @@
         </form>
       </section>
       <section id="tweet-container">
-        <article class="tweet">
-          <header>
-            <div class="tweet-avatar">
-              <img src="/images/profile-hex.png" alt="">
-              <div>Newton</div>
-            </div>
-            <div class="username">@SirIsaac</div>
-          </header>
-          <p>Aim to make your tweet look like the one in the image.</p>
-          <footer>
-            <div>10 days ago</div>
-            <div class="actions">
-              <i class="fas fa-flag"></i>
-              <i class="fas fa-retweet"></i>
-              <i class="fas fa-heart"></i>
-            </div>
-          </footer>
-        </article>
       </section>
 
     </main>

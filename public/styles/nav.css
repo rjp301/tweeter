@@ -3,9 +3,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8em 1.5em;
+  padding: 0 30px;
   color: var(--nav-text-color);
   background-color: var(--nav-background-color);
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 #new-tweet {

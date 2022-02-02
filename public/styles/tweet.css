@@ -1,12 +1,12 @@
 #tweet-container {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 #tweet-container .tweet {
-  margin: 0.5em;
-  padding: 0.5em;
+  margin: 10px;
+  padding: 10px;
   /* width: 100%; */
   border: 2px solid var(--text-color);
   font-size: smaller;
@@ -37,6 +37,7 @@
 
 #tweet-container .tweet header img {
   height: 50px;
+  margin-right: 10px;
 }
 
 #tweet-container .tweet footer {
