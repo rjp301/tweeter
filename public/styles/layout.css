@@ -21,17 +21,20 @@ html {
 }
 
 :root {
-  --primary-color: #ffffff;
-  --secondary-color: #3f68c0;
+  --nav-text-color: white;
+  --nav-background-color: #4056A1;
   --user-color: #7ec7da;
+  --text-color: #545149;
+  --background-color: #f4f1ec;
+  
   --primary-font: 'Source Sans Pro', sans-serif;
   --secondary-font: 'Bungee', cursive;
 }
 
 body {
   font-family: var(--primary-font);
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
+  color: var(--text-color);
+  background-color: var(--background-color);
   font-size: 24px;
 }
 

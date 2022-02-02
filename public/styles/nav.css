@@ -4,19 +4,19 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0.8em 1.5em;
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
+  color: var(--nav-text-color);
+  background-color: var(--nav-background-color);
 }
 
 #new-tweet {
   font-family: var(--primary-font);
   font-size: 0.8em;
   padding: 0.4em;
-  border: solid var(--primary-color) 1px;
+  border: solid var(--nav-text-color) 1px;
   transition: background-color cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
 }
 
 #new-tweet:hover {
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
+  color: var(--nav-background-color);
+  background-color: var(--nav-text-color);
 }

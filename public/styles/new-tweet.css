@@ -1,13 +1,38 @@
-#new-tweet {
+.new-tweet {
   font-family: var(--primary-font);
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
 }
 
-#new-tweet > div {
+.new-tweet > form {
   font-family: var(--secondary-font);
+  display: flex;
+  flex-direction: column;
+}
+
+.new-tweet > form > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: smaller;
+}
+
+.new-tweet > form > textarea {
+  font-family: var(--primary-font);
+  margin-bottom: 0.5em;
+  border: 0;
+  background-color: var(--background-color);
+  border-bottom: 5px var(--text-color) solid;
+  resize: none;
+}
+
+.new-tweet button {
+  background-color: var(--nav-background-color);
+  color: var(--nav-text-color);
+  padding: 0.2em 0.8em;
+  color: white;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
 }
