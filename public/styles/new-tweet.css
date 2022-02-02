@@ -1,0 +1,13 @@
+#new-tweet {
+  font-family: var(--primary-font);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#new-tweet > div {
+  font-family: var(--secondary-font);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

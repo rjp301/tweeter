@@ -1,5 +1,5 @@
 nav {
-  font-family: 'Bungee', cursive;
+  font-family: var(--secondary-font);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,7 +9,7 @@ nav {
 }
 
 #new-tweet {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: var(--primary-font);
   font-size: 0.8em;
   padding: 0.4em;
   border: solid var(--primary-color) 1px;

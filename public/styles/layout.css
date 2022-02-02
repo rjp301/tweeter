@@ -18,17 +18,18 @@ html {
 .container {
   display: flex;
   justify-content: center;
-  width: 90%;
 }
 
 :root {
   --primary-color: #ffffff;
   --secondary-color: #3f68c0;
   --user-color: #7ec7da;
+  --primary-font: 'Source Sans Pro', sans-serif;
+  --secondary-font: 'Bungee', cursive;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: var(--primary-font);
   color: var(--secondary-color);
   background-color: var(--primary-color);
   font-size: 24px;
