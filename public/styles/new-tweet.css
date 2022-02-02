@@ -2,7 +2,10 @@
   font-family: var(--primary-font);
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
+  padding: 0 1em 1em;
+  border-bottom: 1px solid;
+  font-size: smaller;
 }
 
 .new-tweet > form {
