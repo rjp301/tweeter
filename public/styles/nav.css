@@ -20,3 +20,7 @@ nav {
   color: var(--nav-background-color);
   background-color: var(--nav-text-color);
 }
+
+.new-tweet .counter-red {
+  color: rgb(145, 41, 41)
+}
