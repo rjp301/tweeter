@@ -21,18 +21,27 @@ $(document).ready(() => {
 
   $(".new-tweet > form").submit(function (event) {
     event.preventDefault();
+    console.dir(this);
     const $data = $(this).serialize();
 
-    $.ajax({
-      method: 'POST',
-      url: '/tweets',
-      data: $data
-    }).then(() => {
-      loadTweets();
-      console.log($data);
-    });
+    const numChars = $(this).children('#tweet-text').val().length;
+    console.log(numChars);
+
+    if (numChars <= 140) {
+      $.ajax({ method: 'POST', url: '/tweets', data: $data })
+        .then(() => {
+          loadTweets();
+        });
+    } else {
+      alert('Too many characters in tweet');
+    }
   });
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   
   const createTweetElement = tweetData => {
     return $(`
@@ -44,7 +53,7 @@ $(document).ready(() => {
     </div>
     <div class="username">${tweetData.user.handle}</div>
     </header>
-    <p>${tweetData.content.text}</p>
+    <p>${escape(tweetData.content.text)}</p>
     <footer>
     <div>${timeago.format(tweetData.created_at)}</div>
     <div class="actions">
@@ -72,7 +81,6 @@ $(document).ready(() => {
       method: 'GET',
       url: '/tweets',
     }).then(data => {
-      console.log(data);
       renderTweets(data);
     });
   };
