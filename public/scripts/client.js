@@ -19,6 +19,7 @@
 $(document).ready(() => {
   
   const $newTweet = $('.new-tweet.tweet').hide();
+  const $newTweetCharCount = $('#new-tweet-char-count');
   const $tweetContainer = $('#all-tweets');
 
   const $errorOver = $('.new-tweet #tweet-error-msg-over').hide();
@@ -53,6 +54,7 @@ $(document).ready(() => {
 
       $errorNull.slideUp();
       $errorOver.slideUp();
+      $newTweetCharCount.val(140);
     });
   });
 
