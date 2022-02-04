@@ -38,10 +38,12 @@ body {
 #body-container {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 #tweet-container {
   margin: calc(var(--nav-height) + 5px) 10px 5px 10px;
+  flex: 1;
 }
 
 

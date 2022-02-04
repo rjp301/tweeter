@@ -16,3 +16,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Result
+
+My version of this project features a clean and intuitive UI. The new tweet form uses the same styling as the list of tweets. Special care was taken on the margins and animations.
+
+
