@@ -18,14 +18,21 @@
 
 $(document).ready(() => {
   
+  const $newTweet = $('.new-tweet.tweet').hide();
+  const $tweetContainer = $('#all-tweets');
+
   const $errorOver = $('.new-tweet #tweet-error-msg-over').hide();
   const $errorNull = $('.new-tweet #tweet-error-msg-null').hide();
 
-  $(".new-tweet > form").submit(function (event) {
+  $('#new-tweet-button').click(() => {
+    $newTweet.slideToggle().find('textArea').focus();
+  });
+
+  $newTweet.submit(function (event) {
     event.preventDefault();
     console.dir(this);
     const $data = $(this).serialize();
-    const $textArea = $(this).children('#tweet-text')
+    const $textArea = $(this).find('#tweet-text');
 
     const numChars = $textArea.val().trim().length;
     console.log(numChars);
@@ -41,7 +48,6 @@ $(document).ready(() => {
     }
 
     $.ajax({ method: 'POST', url: '/tweets', data: $data }).then(() => {
-      $('.new-tweet div.submit #tweet-error-msg').remove();
       $textArea.val("");
       loadTweets();
 
@@ -80,7 +86,6 @@ $(document).ready(() => {
   };
   
   const renderTweets = tweets => {
-    const $tweetContainer = $('section#tweet-container');
     $tweetContainer.empty();
     
     for (const tweet of tweets) {

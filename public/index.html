@@ -35,23 +35,23 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
-      <span>
-        <div id="new-tweet">
+      <span id="nav-left">tweeter</span>
+      <span id="nav-right">
+        <div id="new-tweet-button">
           <b>Write</b> a new tweet
         </div>
       </span>
     </nav>
 
     <!-- Page-specific (main) content here -->
-    <header id="profile">
-      <div><img src="/images/profile-hex.png" alt="avatar"></div>
-      <h2>Riley Paul</h2>
-    </header>
-    <main class="container">
-      <section class="new-tweet">
-        <form action="/tweets" method="POST">
-          
+    <div id="body-container">
+      <header id="profile">
+        <div><img src="/images/profile-hex.png" alt="avatar"></div>
+        <h2>Riley Paul</h2>
+      </header>
+      <main id="tweet-container">
+        <form class="tweet new-tweet" action="/tweets" method="POST">
+          <!-- Error messages -->
           <div id="tweet-error-msg-over" class="tweet-error-msg">
             <i class="fas fa-exclamation-circle"></i>That tweet is too long! Control yourself
           </div>
@@ -59,16 +59,17 @@
             <i class="fas fa-exclamation-circle"></i>That tweet is empty. Express yourself!
           </div>
 
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div>
+          <!-- New tweet info -->
+          <textarea id="tweet-text" name="text" placeholder="What are you humming about?"></textarea>
+          <div id="new-tweet-info">
             <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output id="new-tweet-char-count" name="counter" for="tweet-text">140</output>
           </div>
-        </form>
-      </section>
-      <section id="tweet-container">
-      </section>
 
-    </main>
+        </form>
+        <section id="all-tweets">
+        </section>
+      </main>
+    </div>
   </body>
 </html>
