@@ -14,27 +14,18 @@ html {
 /*
 * Global layout stuff
 */
-
-main.container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-@media only screen and (min-width: 1024) {
-  
-}
-
 :root {
   --nav-text-color: white;
   --nav-background-color: #4056A1;
-  --user-color: #ebc14e;
+  --user-color: orange;
   --text-color: #545149;
   --background-color: #f4f1ec;
   --error-color: rgb(196, 13, 13);
-
+  
   --primary-font: 'Source Sans Pro', sans-serif;
   --secondary-font: 'Bungee', cursive;
+
+  --nav-height: 60px;
 }
 
 body {
@@ -42,6 +33,15 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   font-size: 24px;
+}
+
+#body-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#tweet-container {
+  margin: calc(var(--nav-height) + 5px) 10px 5px 10px;
 }
 
 
