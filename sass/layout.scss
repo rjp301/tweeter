@@ -6,10 +6,10 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
 
 /*
 * Global layout stuff
@@ -21,8 +21,10 @@ html {
   --text-color: #545149;
   --background-color: #f4f1ec;
   --error-color: rgb(196, 13, 13);
-  --primary-font: "Source Sans Pro", sans-serif;
-  --secondary-font: "Bungee", cursive;
+  
+  --primary-font: 'Source Sans Pro', sans-serif;
+  --secondary-font: 'Bungee', cursive;
+
   --nav-height: 60px;
 }
 

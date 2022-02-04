@@ -6,7 +6,6 @@
   border-bottom: 2px var(--text-color) solid;
   width: 100%;
 }
-
 .new-tweet #new-tweet-info {
   display: flex;
   justify-content: space-between;
@@ -14,22 +13,18 @@
   font-family: var(--secondary-font);
   margin: 0 10px;
 }
-
 .new-tweet #new-tweet-info button {
   background-color: var(--nav-background-color);
   color: var(--nav-text-color);
-
   padding: 5px 20px;
   box-shadow: none;
   border: 0;
   border-radius: 0;
   cursor: pointer;
 }
-
 .new-tweet .counter-red {
   color: var(--error-color);
 }
-
 .new-tweet .tweet-error-msg {
   justify-content: center;
   font-family: var(--primary-font);
@@ -38,7 +33,6 @@
   padding: 10px;
   margin-bottom: 10px;
 }
-
 .new-tweet .tweet-error-msg i {
   margin: 0 0.5em;
 }

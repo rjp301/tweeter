@@ -4,6 +4,10 @@
   flex-direction: column-reverse;
 }
 
+.tweet:hover {
+  box-shadow: 4px 4px #4057a13a;
+}
+
 .tweet {
   margin: 5px 0;
   padding: 10px;
@@ -11,34 +15,24 @@
   font-size: smaller;
   background-color: white;
 }
-
-.tweet:hover {
-  box-shadow: 4px 4px #4057a13a;
+.tweet p {
+  padding: 10px;
 }
-
 .tweet header {
   display: flex;
   justify-content: space-between;
 }
-
-.tweet p {
-  padding: 10px;
-}
-
 .tweet header div {
   display: flex;
   align-items: center;
 }
-
 .tweet header .username {
   color: #4057a18e;
 }
-
 .tweet header img {
   height: 50px;
   margin-right: 10px;
 }
-
 .tweet footer {
   display: flex;
   justify-content: space-between;
@@ -47,12 +41,10 @@
   padding: 10px;
   border-top: 2px solid var(--text-color);
 }
-
 .tweet footer i {
   padding: 0 0.1em;
   color: var(--nav-background-color);
 }
-
-.tweet footer i:hover{
+.tweet footer i:hover {
   color: orange;
 }

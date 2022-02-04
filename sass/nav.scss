@@ -3,10 +3,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
   padding: 0 30px;
   height: var(--nav-height);
+  
   color: var(--nav-text-color);
   background-color: var(--nav-background-color);
+
   position: fixed;
   top: 0;
   width: 100%;
