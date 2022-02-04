@@ -1,3 +1,17 @@
-@media only screen and (max-width: 1024) {
-  
+@media only screen and (max-width: 850px) {
+  #body-container {
+    flex-direction: column;
+  }
+
+  #profile {
+    margin: 0;
+  }
+
+  nav {
+    background-color: transparent;
+  }
+
+  #tweet-container {
+    margin-top: 5px;
+  }
 }

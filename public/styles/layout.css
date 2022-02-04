@@ -43,9 +43,12 @@ body {
 
 #tweet-container {
   margin: calc(var(--nav-height) + 5px) 10px 5px 10px;
-  flex: 1;
+  flex: 2;
 }
 
+#profile {
+  flex: 1;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

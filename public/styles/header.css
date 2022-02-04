@@ -6,7 +6,7 @@
   height: fit-content;
 
   /* padding: 10px 30px 0; */
-  margin: calc(var(--nav-height) + 10px) 0 0 10px;
+  margin: calc(var(--nav-height) + 10px) 4% 0;
 
   color: var(--nav-text-color);
   background-color: var(--user-color);
