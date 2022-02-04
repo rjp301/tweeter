@@ -27,7 +27,8 @@ html {
   --user-color: #ebc14e;
   --text-color: #545149;
   --background-color: #f4f1ec;
-  
+  --error-color: rgb(196, 13, 13);
+
   --primary-font: 'Source Sans Pro', sans-serif;
   --secondary-font: 'Bungee', cursive;
 }
@@ -38,6 +39,7 @@ body {
   background-color: var(--background-color);
   font-size: 24px;
 }
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

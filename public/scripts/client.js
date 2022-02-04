@@ -18,23 +18,36 @@
 
 $(document).ready(() => {
   
+  const $errorOver = $('.new-tweet #tweet-error-msg-over').hide();
+  const $errorNull = $('.new-tweet #tweet-error-msg-null').hide();
 
   $(".new-tweet > form").submit(function (event) {
     event.preventDefault();
     console.dir(this);
     const $data = $(this).serialize();
+    const $textArea = $(this).children('#tweet-text')
 
-    const numChars = $(this).children('#tweet-text').val().length;
+    const numChars = $textArea.val().trim().length;
     console.log(numChars);
 
-    if (numChars <= 140) {
-      $.ajax({ method: 'POST', url: '/tweets', data: $data })
-        .then(() => {
-          loadTweets();
-        });
-    } else {
-      alert('Too many characters in tweet');
+    if (numChars <= 0) {
+      $errorOver.slideUp();
+      return $errorNull.slideDown();
     }
+
+    if (numChars > 140) {
+      $errorNull.slideUp();
+      return $errorOver.slideDown();
+    }
+
+    $.ajax({ method: 'POST', url: '/tweets', data: $data }).then(() => {
+      $('.new-tweet div.submit #tweet-error-msg').remove();
+      $textArea.val("");
+      loadTweets();
+
+      $errorNull.slideUp();
+      $errorOver.slideUp();
+    });
   });
 
   const escape = function (str) {

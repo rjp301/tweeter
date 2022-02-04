@@ -50,9 +50,16 @@
     </header>
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
-          <textarea name="text" rows="1" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          
+          <div id="tweet-error-msg-over" class="tweet-error-msg">
+            <i class="fas fa-exclamation-circle"></i>That tweet is too long! Control yourself
+          </div>
+          <div id="tweet-error-msg-null" class="tweet-error-msg">
+            <i class="fas fa-exclamation-circle"></i>That tweet is empty. Express yourself!
+          </div>
+
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div>
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
